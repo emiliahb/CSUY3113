@@ -15,7 +15,6 @@ class MyImageClass {
     
     MyImageClass(string filename) {
         cout << "made it in" << endl;
-        //fstream imgFile;
         ifstream imgFile;
         try {
             imgFile.open(filename);
@@ -23,10 +22,7 @@ class MyImageClass {
         catch (exception& e) {
             cout << "Error: " << e.what() << std::endl;
         }
-        cout << "test1" << endl;
-        string test;
-        getline(imgFile, test, '\n');//this->type);
-        cout << "test" << test << endl;
+        getline(imgFile, this->type);
 
         string line;
         if (type == "P3") {
